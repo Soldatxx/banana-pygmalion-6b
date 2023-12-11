@@ -3,3 +3,4 @@ transformers
 accelerate
 banana-cli
 potassium
+sanic
