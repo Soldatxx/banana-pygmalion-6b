@@ -10,7 +10,7 @@ def init():
     global tokenizer
 
     print("loading to CPU...")
-    model = GPTJForCausalLM.from_pretrained("savvamadar/pygmalion-6b-v3-ggml-ggjt-q4_0", torch_dtype=torch.float16, low_cpu_mem_usage=True)
+    model = GPTJForCausalLM.from_pretrained("PygmalionAI/pygmalion-6b", torch_dtype=torch.float16, low_cpu_mem_usage=True)
     print("done")
 
     # conditionally load to GPU
@@ -19,7 +19,7 @@ def init():
         model.cuda()
         print("done")
 
-    tokenizer = GPT2Tokenizer.from_pretrained("savvamadar/pygmalion-6b-v3-ggml-ggjt-q4_0")
+    tokenizer = GPT2Tokenizer.from_pretrained("PygmalionAI/pygmalion-6b")
 
 
 # Inference is ran for every server call
