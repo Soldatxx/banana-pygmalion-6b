@@ -9,10 +9,9 @@ RUN apt-get update && apt-get install -y git
 RUN pip3 install --upgrade pip
 ADD requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
-RUN pip install websockets==10.0
 
 # We add the banana boilerplate here
-ADD server.py .
+ADD app.py .
 
 # Add your model weight files 
 # (in this case we have a python script)
@@ -24,4 +23,4 @@ ADD app.py .
 
 EXPOSE 8000
 
-CMD python3 -u server.py
+CMD python3 -u app.py
