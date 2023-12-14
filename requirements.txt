@@ -1,6 +1,3 @@
-sanic==22.6.2
-transformers
-accelerate
-banana-cli
 potassium
-sanic
+torch
+transformers
