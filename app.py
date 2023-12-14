@@ -10,7 +10,7 @@ def init():
     global tokenizer
 
     print("loading to CPU...")
-    model = AutoModelForCasualLM.from_pretrained("PygmalionAI/pygmalion-2-13b", torch_dtype=torch.float16, low_cpu_mem_usage=True)
+    model = AutoModelForCausalLM.from_pretrained("PygmalionAI/pygmalion-2-13b", torch_dtype=torch.float16, low_cpu_mem_usage=True)
     print("done")
 
     # conditionally load to GPU
