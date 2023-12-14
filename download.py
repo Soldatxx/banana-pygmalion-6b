@@ -10,12 +10,12 @@ def download_model():
     # do a dry run of loading the huggingface model, which will download weights
     print("downloading model...")
     GPTJForCausalLM.from_pretrained(
-        "PygmalionAI/pygmalion-6b", torch_dtype=torch.float16, low_cpu_mem_usage=True
+        "PygmalionAI/pygmalion-2-13b", torch_dtype=torch.float16, low_cpu_mem_usage=True
     )
     print("done")
 
     print("downloading tokenizer...")
-    GPT2Tokenizer.from_pretrained("PygmalionAI/pygmalion-6b")
+    GPT2Tokenizer.from_pretrained("PygmalionAI/pygmalion-2-13b")
     print("done")
 
 if __name__ == "__main__":
