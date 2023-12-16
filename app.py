@@ -10,14 +10,14 @@ def init():
     print(f"device is {device}...")
     
     if device == "cuda:0":
-        model = AutoModelForCausalLM.from_pretrained("PygmalionAI/pygmalion-1.3b", torch_dtype=torch.float16, low_cpu_mem_usage=True)
+        model = AutoModelForCausalLM.from_pretrained("Intel/neural-chat-7b-v3", torch_dtype=torch.float16, low_cpu_mem_usage=True)
     # If we're running on cpu, load the smaller model & don't use fp16
     else:
-        model = AutoModelForCausalLM.from_pretrained("PygmalionAI/pygmalion-1.3b")
+        model = AutoModelForCausalLM.from_pretrained("Intel/neural-chat-7b-v3")
     model.to(device)
     print("done")
 
-    tokenizer = AutoTokenizer.from_pretrained("PygmalionAI/pygmalion-1.3b")
+    tokenizer = AutoTokenizer.from_pretrained("Intel/neural-chat-7b-v3")
 
     context = {
         "tokenizer": tokenizer,
