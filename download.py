@@ -10,12 +10,12 @@ def download_model():
     # do a dry run of loading the huggingface model, which will download weights
     print("downloading model...")
     AutoModelForCausalLM.from_pretrained(
-        "PygmalionAI/pygmalion-1.3b", torch_dtype=torch.float16, low_cpu_mem_usage=True
+        "Intel/neural-chat-7b-v3", torch_dtype=torch.float16, low_cpu_mem_usage=True
     )
     print("done")
 
     print("downloading tokenizer...")
-    AutoTokenizer.from_pretrained("PygmalionAI/pygmalion-1.3b")
+    AutoTokenizer.from_pretrained("Intel/neural-chat-7b-v3")
     print("done")
 
 if __name__ == "__main__":
